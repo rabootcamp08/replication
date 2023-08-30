@@ -83,6 +83,10 @@ summary(df_raw)
 colnames(df_raw)
 colnames(df_clean)
 
+summary(df_final)
 
 
-
+df_final|>
+  ggplot(aes())+
+  geom_boxplot(aes(x=age,y=children,group=education))+
+  theme()+theme_bw()
