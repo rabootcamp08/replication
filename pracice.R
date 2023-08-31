@@ -71,22 +71,13 @@ df_raw_01<-df_raw_01|>
   mutate(outside_wedge_pos = case_when(outside_wedge>0~1,TRUE~0),
          interaction = condition2*outside_wedge_pos)
 
-outside_wedge_pos = (outside_wedge > 0)
-interaction = condition2*outside_wedge_pos
-
 df_final<-df_raw_01|>
   dplyr::select(-c(condition, marital, employed_ever, num_know, num_mutual_friends, q45_4_p2,
                      q46_1_p2, q43_1_p2, count, condition_txt, glowork_choice, second_order_total, 
                      signed_up, no_wife_number))
 
-summary(df_raw)
-colnames(df_raw)
-colnames(df_clean)
-
 summary(df_final)
 
+write.csv(df_final,"df_final.csv", row.names = F)
+getwd()
 
-df_final|>
-  ggplot(aes())+
-  geom_boxplot(aes(x=age,y=children,group=education))+
-  theme()+theme_bw()
