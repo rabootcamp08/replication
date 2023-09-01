@@ -17,6 +17,9 @@ df_fig3 <- df_final |> group_by(condition2) |>
 
 
 
+
+
+
 df_fig3 |> ggplot(aes(x = condition3, y = mean_number, group = condition3)) +
   geom_bar(stat = "identity",fill="lightskyblue") + 
   geom_errorbar(aes(ymax = mean_number + 1.96*sd_number/sqrt(count_number), 
