@@ -1,3 +1,4 @@
+# cleaning
 rm(list = ls())
 #↑environmentのところを消す
 
