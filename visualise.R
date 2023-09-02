@@ -1,4 +1,4 @@
-#可視化セクション
+#visualization
 library(tidyverse)
 
 df_final <- read.csv("df_final.csv")

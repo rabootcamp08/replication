@@ -1,4 +1,4 @@
-#fig3
+#figure3
 rm(list = ls())
 setwd("C:/Users/Owner/Documents/replication")
 
